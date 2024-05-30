@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'home' as home_url %}
+{% url 'events' as events_url %}
 
 <!doctype html>
 <html lang="en">
@@ -40,7 +41,8 @@
                     <a class="nav-link {% if request.path == pet_care_url %}active{% endif %}" href="#">Pet-care</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == events_url %}active{% endif %}" href="#">Events</a>
+                    <a class="nav-link {% if request.path == events_url %}active{% endif %}"
+                        href="{% url 'events' %}">Events</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
