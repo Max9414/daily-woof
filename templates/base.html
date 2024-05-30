@@ -1,4 +1,5 @@
 {% load static %}
+{% url 'home' as home_url %}
 
 <!doctype html>
 <html lang="en">
@@ -33,33 +34,27 @@
                         href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == breeds_url %}active{% endif %}"
-                        href="{% url 'breeds' %}">Breeds</a>
+                    <a class="nav-link {% if request.path == breeds_url %}active{% endif %}" href="#">Breeds</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == pet_care_url %}active{% endif %}"
-                        href="{% url 'pet-care' %}">Pet-care</a>
+                    <a class="nav-link {% if request.path == pet_care_url %}active{% endif %}" href="#">Pet-care</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == events_url %}active{% endif %}"
-                        href="{% url 'events' %}">Events</a>
+                    <a class="nav-link {% if request.path == events_url %}active{% endif %}" href="#">Events</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == profile_url %}active{% endif %}"
-                        href="{% url 'profile' %}">Profile</a>
+                    <a class="nav-link {% if request.path == profile_url %}active{% endif %}" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav-link" href="#">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}"
-                        href="{% url 'login' %}">Login</a>
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="#">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == register_url %}active{% endif %}"
-                        href="{% url 'register' %}">Register</a>
+                    <a class="nav-link {% if request.path == register_url %}active{% endif %}" href="#">Register</a>
                 </li>
                 {% endif %}
             </ul>
