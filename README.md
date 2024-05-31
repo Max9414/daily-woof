@@ -9,3 +9,5 @@ The project aims to create a website where people can connect, learn more about 
 [Visit the Website Here](project link will go here)
 
 [Visit the Project's GitHub Repository Here](https://github.com/Max9414/daily-woof)
+
+Main bugs so far:
