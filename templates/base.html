@@ -41,25 +41,27 @@
                         href="{% url 'breeds' %}">Breeds</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == pet_care_url %}active{% endif %}"
+                    <a class="nav-link {% if request.path == petcare_url %}active{% endif %}"
                         href="{% url 'petcare' %}">Pet-care</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == events_url %}active{% endif %}"
                         href="{% url 'events' %}">Events</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                <li class="nav-item">
+                <li class="nav-item align-self-end">
                     <a class="nav-link {% if request.path == profile_url %}active{% endif %}" href="#">Profile</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item align-self-end">
                     <a class="nav-link" href="#">Logout</a>
                 </li>
                 {% else %}
-                <li class="nav-item">
+                <li class="nav-item align-self-end">
                     <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="#">Login</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item align-self-end">
                     <a class="nav-link {% if request.path == register_url %}active{% endif %}" href="#">Register</a>
                 </li>
                 {% endif %}

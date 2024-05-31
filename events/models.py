@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 class Location(models.Model):
     city = models.CharField(max_length=100, unique=True)
 
+class Dog(models.Model):
+    dog = models.CharField(max_length=100)
+
 class Event(models.Model):
     creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="events"
