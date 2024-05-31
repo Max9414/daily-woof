@@ -20,14 +20,13 @@ class Event(models.Model):
     )
     participants = models.ManyToManyField('Dog', related_name='event_participants')
     short_description = models.CharField(max_length=200)
-    max_participants = models.IntegerField(null=True, blank=True, default=None)
-    # accept/refuse
+    # max_participants = models.IntegerField(null=True, blank=True, default=None)
 
-    def add_participant(self, dog):
-        if self.max_participants is None or self.participants.count() < self.max_participants:
-            self.participants.add(dog)
-        else:
-            raise ValueError("Maximum number of participants reached")
+    # def add_participant(self, dog):
+    #     if self.max_participants is None or self.participants.count() < self.max_participants:
+    #         self.participants.add(dog)
+    #     else:
+    #         raise ValueError("Maximum number of participants reached")
 
     def __str__(self):
         return self.title
