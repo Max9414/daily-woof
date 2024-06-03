@@ -3,3 +3,17 @@
         align-self: end;
     }
 }
+
+body {
+    padding-bottom: 70px;
+}
+
+.breed-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.breed-link:hover {
+    text-decoration: none;
+    color: burlywood;
+}
