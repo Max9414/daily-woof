@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls'), name='home'),
     path("accounts/", include("allauth.urls")),
+    path('dog_profile', include(dog_profile.urls), name='dog_profile'),
     path('breeds/', include('breeds.urls'), name='breeds'),
     path('petcare/', include('petcare.urls'), name='petcare'),
     path('events/', include('events.urls'), name='events'),

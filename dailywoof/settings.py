@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'events',
     'breeds',
     'petcare',
+    'profiles',
 ]
 
 SITE_ID = 1
